@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<div id="app">
+		<input type="text" name="nome" id="nome">
+		<button class="botao">Adicionar</button>
+
+		<div class="box"></div>
+	</div>
+
+<script type="text/javascript">
+		function mostraAlerta(){
+		alert('Botão foi clicado');
+	}
+
+	var inputElement = document.getElementById('nome');
+
+	console.log(inputElement);
+
+	var inputElement = document.getElementsByTagName('input')[0];
+	console.log(inputElement);
+
+
+	var inputElement = document.getElementsByClassName('input');
+	console.log(inputElement);
+
+
+	var inputElement = document.querySelector('div#app input' 'input name=nome');
+	console.log(inputElement);
+
+		var inputElement = document.querySelectorAll('input');
+
+	console.log(inputElement);
+
+
+	var inputElement = document.querySelector('input[name=nome]');
+
+	var btnElement = document.querySelector('button.botao');
+
+	btnElement.onclick = function(){
+		var text = inputElement.value;
+
+		alert(text);
+	}
+
+	//Create Element
+	var linkElement = document.createElement('a');
+
+	linkElement.setAttribute('href', 'http://rocketseat.com.br');
+	linkElement.setAttribute('title', 'Site rocketseat');
+
+	var textElement = document.createTextNote('Acesse ja o site');
+
+	//Adiciona o textElement no elemento criado
+	linkElement.appendChild(textElement);
+
+	var containerElement = document.querySelector('#app');
+	containerElement.appendChild(linkElement);
+
+	var inputElement = document.querySelector('#nome');
+	//containerElement.removeChild(inputElement);
+
+
+	//CSS Elements
+	var boxElement = document.querySelector('.box');
+
+	boxElement.style.width = 100;
+	boxElement.style.height = 100;
+	boxElement.style.backgroundColor = '#f00';
+
+</script>
+</body>
+</html>

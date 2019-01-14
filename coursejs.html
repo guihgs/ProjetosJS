@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Learning Javascript</title>
+</head>
+<body>
+	<div id="app">
+		<button onclick="mostraAlerta()">Click Me</button>
+
+		<input type="text" name="nome" id="nome">
+		<button class="botao">Adicionar</button>
+	</div>
+
+<script type="text/javascript">
+	var nome = "Guilherme";
+	var idade = 23;
+	var peso = 80.5;
+	var humano = true;
+
+	var alunos = ['Diego', 'Gabriel', 'Lucas'];
+
+	var aluno = {
+		nome: alunos[0],
+		idade: 23,
+		peso: 80.5,
+		humano: true
+	};
+
+	console.log(alunos[1]);
+
+	console.log(aluno.idade);
+
+	//Functions
+	function some(numero1, numero2){
+		var resultado = numero = numero1 + numero2;
+
+		return resultado;
+	}
+
+	var resultado = soma(1,2);
+	console.log(resultado);
+
+
+	function retornaSexo(sexo){
+		//M, F
+		//Masculino, Feminino
+		if(sexo == 'M'){
+			return 'Masculino';
+		}else if(sexo == 'F'){
+			return 'Feminino';
+
+		}else{
+			return 'Outro';
+		}
+	}
+
+
+	function retornaSexo(sexo){
+		switch(sexo){
+			case 'M':
+			return 'Masculino';
+			case 'F':
+			return 'Feminino';
+			default:
+			return 'Outro';
+		}
+	}
+
+	//Condição Ternaria
+	var retorno = (sexo === 'M') ? 'Masculino' : 'Feminino';
+	console.log(retorno);
+
+
+	var resultado = retornaSexo('M');
+	console.log(resultado);
+
+
+	//Loops
+	for (var i = 0; i <= 100; i++){
+		console.log(i);
+	}
+
+	var j = 0
+	while(j <= 100){
+		console.log(j)
+
+		j++;	
+	}
+
+	//Timeout
+	function exibeAlgo(){
+		console.log('Hello World');
+	}
+
+	setInterval(exibeAlgo, 2000);
+
+	setTimeout(exibeAlgo, 5000);
+
+
+	function mostraAlerta(){
+		alert('Botão foi clicado');
+	}
+
+	var inputElement = document.getElementById('nome');
+
+	console.log(inputElement);
+
+	var inputElement = document.getElementsByTagName('input')[0];
+	console.log(inputElement);
+
+
+	var inputElement = document.getElementsByClassName('input');
+	console.log(inputElement);
+
+
+	var inputElement = document.querySelector('div#app input' 'input name=nome');
+	console.log(inputElement);
+
+		var inputElement = document.querySelectorAll('input');
+
+	console.log(inputElement);
+
+
+	var inputElement = document.querySelector('input[name=nome]');
+
+	var btnElement = document.querySelector('button.botao');
+
+	btnElement.onclick = function(){
+		var text = inputElement.value;
+
+		alert(text);
+	}
+
+
+
+</script>
+</body>
+</html>
